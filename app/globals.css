@@ -1,0 +1,151 @@
+@import "tailwindcss";
+@import "@fontsource-variable/fraunces/full.css";
+@import "@fontsource-variable/fraunces/full-italic.css";
+@import "@fontsource-variable/inter/index.css";
+@import "@fontsource/caveat/600.css";
+
+/* ===== Design system — "Modern Italian Trattoria" ===== */
+@theme {
+  --color-pomodoro: #a83c30;
+  --color-pomodoro-dark: #8a2f25;
+  --color-crema: #f7eedc;
+  --color-crema-dark: #efe2c8;
+  --color-bottiglia: #344d3b;
+  --color-bottiglia-dark: #263a2c;
+  --color-espresso: #30251e;
+  --color-giallo: #ddaa55;
+  --color-bianco: #fffcf6;
+  --color-inchiostro: #4a3b31;
+
+  --font-display: "Fraunces Variable", "DM Serif Display", Georgia, serif;
+  --font-sans: "Inter Variable", system-ui, -apple-system, sans-serif;
+  --font-hand: "Caveat", "Segoe Script", cursive;
+
+  --ease-artigiano: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-crema);
+    color: var(--color-espresso);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: var(--color-pomodoro);
+    color: var(--color-bianco);
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-giallo);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-variation-settings: "SOFT" 50, "WONK" 1;
+    letter-spacing: -0.02em;
+    line-height: 1.02;
+  }
+}
+
+@layer components {
+  /* Texture carta: rumore SVG inline, leggerissimo */
+  .paper {
+    background-color: var(--color-crema);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .19 0 0 0 0 .14 0 0 0 0 .1 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .paper-dark {
+    background-color: var(--color-espresso);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .95 0 0 0 0 .85 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  /* Tovaglia a quadretti */
+  .gingham {
+    background-color: var(--color-bianco);
+    background-image:
+      linear-gradient(90deg, rgba(168, 60, 48, 0.55) 50%, transparent 50%),
+      linear-gradient(rgba(168, 60, 48, 0.55) 50%, transparent 50%);
+    background-size: 28px 28px;
+  }
+  .gingham-strip {
+    height: 14px;
+    background-color: var(--color-bianco);
+    background-image:
+      linear-gradient(90deg, rgba(168, 60, 48, 0.6) 50%, transparent 50%),
+      linear-gradient(rgba(168, 60, 48, 0.6) 50%, transparent 50%);
+    background-size: 14px 14px;
+  }
+  /* Tenda verde a strisce (la tenda all'ingresso citata dagli ospiti) */
+  .awning {
+    background: repeating-linear-gradient(90deg, var(--color-bottiglia) 0 34px, #f3ead6 34px 68px);
+    -webkit-mask: radial-gradient(17px at 50% 100%, transparent 98%, #000) 0 0 / 34px 100%;
+    mask: radial-gradient(17px at 50% 100%, transparent 98%, #000) 0 0 / 34px 100%;
+  }
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .hand {
+    font-family: var(--font-hand);
+    font-weight: 600;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    border-radius: 999px;
+    padding: 0.95rem 1.6rem;
+    font-weight: 600;
+    font-size: 0.98rem;
+    transition: transform 0.35s var(--ease-artigiano), background-color 0.25s, color 0.25s, box-shadow 0.35s;
+    will-change: transform;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn:active { transform: translateY(0) scale(0.98); }
+  .btn-primary {
+    background: var(--color-pomodoro);
+    color: var(--color-bianco);
+    box-shadow: 0 10px 24px -12px rgba(168, 60, 48, 0.8);
+  }
+  .btn-primary:hover { background: var(--color-pomodoro-dark); }
+  .btn-ghost {
+    border: 1.5px solid currentColor;
+  }
+  .btn-ghost:hover { background: var(--color-espresso); color: var(--color-crema); border-color: var(--color-espresso); }
+  .link-u {
+    background: linear-gradient(currentColor, currentColor) 0 100% / 0 1.5px no-repeat;
+    transition: background-size 0.4s var(--ease-artigiano);
+  }
+  .link-u:hover { background-size: 100% 1.5px; }
+  .tag-verify {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border: 1px dashed currentColor;
+    border-radius: 999px;
+    padding: 0.15rem 0.6rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+}
+
+/* Elementi animati: visibili di default, nascosti solo se JS + motion OK */
+.js-motion [data-reveal] { opacity: 0; transform: translateY(28px); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .js-motion [data-reveal] { opacity: 1 !important; transform: none !important; }
+}

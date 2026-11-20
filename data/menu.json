@@ -1,0 +1,62 @@
+{
+  "updatedAt": "2026-11-20",
+  "isDemo": true,
+  "note": {
+    "it": "Menu dimostrativo: piatti ricavati dalle recensioni pubbliche. Disponibilità e prezzi da inserire a cura della trattoria.",
+    "en": "Sample menu: dishes taken from public reviews. Availability and prices to be filled in by the trattoria."
+  },
+  "special": {
+    "it": "Zuppa del giorno — chiedete in sala cosa bolle in pentola",
+    "en": "Soup of the day — ask the staff what's simmering today"
+  },
+  "sections": [
+    {
+      "id": "antipasti",
+      "title": { "it": "Per cominciare", "en": "To start" },
+      "items": [
+        { "id": "a1", "name": { "it": "Tagliere di prosciutto e pecorino", "en": "Prosciutto and pecorino board" }, "desc": { "it": "Il classico per aspettare i primi", "en": "The classic way to wait for the pasta" }, "price": null, "available": true },
+        { "id": "a2", "name": { "it": "Carpaccio di manzo", "en": "Beef carpaccio" }, "desc": { "it": "Citato spesso da chi ci ha già mangiato", "en": "Often mentioned by returning guests" }, "price": null, "available": true }
+      ]
+    },
+    {
+      "id": "primi",
+      "title": { "it": "Primi", "en": "First courses" },
+      "items": [
+        { "id": "p1", "name": { "it": "Strangozzi alla carbonara", "en": "Strangozzi carbonara" }, "desc": { "it": "La pasta umbra a sezione quadrata, con guanciale e uovo", "en": "Umbria's square-cut pasta with guanciale and egg" }, "price": null, "available": true, "star": true },
+        { "id": "p2", "name": { "it": "Gnocchi al Sagrantino", "en": "Gnocchi with Sagrantino wine" }, "desc": { "it": "Il vino di Montefalco finisce nel piatto", "en": "Montefalco's wine, straight into the sauce" }, "price": null, "available": true, "star": true },
+        { "id": "p3", "name": { "it": "Tagliatelle ai porcini", "en": "Tagliatelle with porcini" }, "desc": { "it": "Quando la stagione lo permette", "en": "When the season allows" }, "price": null, "available": true },
+        { "id": "p4", "name": { "it": "Tagliolini al cinghiale in bianco", "en": "Tagliolini with wild boar ragù (no tomato)" }, "desc": { "it": "Sugo di cinghiale senza pomodoro", "en": "Slow-cooked wild boar, white style" }, "price": null, "available": true },
+        { "id": "p5", "name": { "it": "Strangozzi fave e guanciale", "en": "Strangozzi with broad beans and guanciale" }, "desc": { "it": "Piatto di stagione", "en": "Seasonal" }, "price": null, "available": false }
+      ]
+    },
+    {
+      "id": "secondi",
+      "title": { "it": "Secondi", "en": "Main courses" },
+      "items": [
+        { "id": "s1", "name": { "it": "Spezzatino di cinghiale", "en": "Wild boar stew" }, "desc": { "it": "Cotto a lungo, come si fa a casa", "en": "Slow-cooked, the way it's done at home" }, "price": null, "available": true, "star": true },
+        { "id": "s2", "name": { "it": "Trippa al pomodoro", "en": "Tripe in tomato sauce" }, "desc": { "it": "Per chi la cerca, e la cerca per davvero", "en": "For those who know, and go looking for it" }, "price": null, "available": true },
+        { "id": "s3", "name": { "it": "Guancia di manzo", "en": "Braised beef cheek" }, "desc": { "it": "Tenerissima, da scarpetta", "en": "Fork-tender; keep some bread for the sauce" }, "price": null, "available": true },
+        { "id": "s4", "name": { "it": "Pollo alla Danilo", "en": "Chicken \"alla Danilo\"" }, "desc": { "it": "Ricetta della casa, chiedete in sala", "en": "A house recipe — ask the staff" }, "price": null, "available": true }
+      ]
+    },
+    {
+      "id": "contorni",
+      "title": { "it": "Contorni", "en": "Sides" },
+      "items": [
+        { "id": "c1", "name": { "it": "Porcini fritti", "en": "Fried porcini mushrooms" }, "desc": { "it": "Il contorno più richiesto", "en": "The most requested side" }, "price": null, "available": true, "star": true },
+        { "id": "c2", "name": { "it": "Carciofi fritti", "en": "Fried artichokes" }, "desc": { "it": "Porzione generosa", "en": "A generous portion" }, "price": null, "available": true },
+        { "id": "c3", "name": { "it": "Patate fritte della casa", "en": "House fries" }, "desc": { "it": "", "en": "" }, "price": null, "available": true },
+        { "id": "c4", "name": { "it": "Insalata e pomodori", "en": "Salad and tomatoes" }, "desc": { "it": "", "en": "" }, "price": null, "available": true }
+      ]
+    },
+    {
+      "id": "dolci",
+      "title": { "it": "Dolci e fine pasto", "en": "Desserts and coffee" },
+      "items": [
+        { "id": "d1", "name": { "it": "Crostata di visciole", "en": "Sour cherry tart" }, "desc": { "it": "", "en": "" }, "price": null, "available": true },
+        { "id": "d2", "name": { "it": "Torta del giorno", "en": "Cake of the day" }, "desc": { "it": "", "en": "" }, "price": null, "available": true },
+        { "id": "d3", "name": { "it": "Caffè nella moka", "en": "Moka pot coffee" }, "desc": { "it": "Portato al tavolo, con la cremina zuccherata", "en": "Brought to the table, with whipped sugar crema" }, "price": null, "available": true, "star": true }
+      ]
+    }
+  ]
+}
